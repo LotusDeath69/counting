@@ -5,6 +5,11 @@ import os
 from server import keepAlive
 prefix = '%'
 
+"""
+Used flask to create server.
+Hosted on repl.it.
+Used uptimerobot to keep server running.
+"""
 
 client = commands.Bot(command_prefix=prefix, help_command=None)
 
@@ -42,5 +47,5 @@ async def on_message(message):
 async def test(ctx, arg):
   await ctx.reply('hello world')
 
-keepAlive()
+# keepAlive()
 client.run(os.environ['TOKEN'])
